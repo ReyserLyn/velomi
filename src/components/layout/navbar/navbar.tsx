@@ -10,8 +10,8 @@ export default async function Navbar() {
             <Image
               src="/logo/SVG/logo-horizontal-light.svg"
               alt="Velomi Store"
-              width={120}
-              height={42}
+              width={200}
+              height={70}
             />
           </Link>
         </div>
