@@ -1,4 +1,5 @@
 import { TicketPercent, Truck } from "lucide-react";
+import Link from "next/link";
 import {
   FacebookLogo,
   InstagramLogo,
@@ -6,9 +7,9 @@ import {
   WhatsAppLogo,
   XLogo,
 } from "@/components/logos";
+import { ThemeToggle } from "@/components/theme-toogle";
 import { Separator } from "@/components/ui/separator";
 import { LINKS } from "@/config/links";
-import { ThemeToggle } from "../theme-toogle";
 
 export default function AnnouncementBar() {
   return (
@@ -32,18 +33,13 @@ export default function AnnouncementBar() {
         </div>
 
         <div className="flex items-center gap-2 text-xs sm:text-sm">
-          <a
-            href={LINKS.whatsapp}
-            aria-label="Contáctanos por WhatsApp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={LINKS.whatsapp} aria-label="Contáctanos por WhatsApp">
             <div className="flex items-center gap-2">
               <span className="hidden xs:inline">Contáctanos:</span>
               <WhatsAppLogo className="w-4 h-4" />
               <span className="text-xs">+51 932 718 790</span>
             </div>
-          </a>
+          </Link>
 
           <Separator
             orientation="vertical"
@@ -51,38 +47,23 @@ export default function AnnouncementBar() {
           />
 
           <div className="hidden sm:flex items-center gap-2">
-            <a
-              href={LINKS.facebook}
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={LINKS.facebook} aria-label="Facebook">
               <FacebookLogo className="w-4 h-4" />
-            </a>
-            <a
+            </Link>
+            <Link
               href={LINKS.tiktok}
               aria-label="TikTok"
               target="_blank"
               rel="noopener noreferrer"
             >
               <TikTokLogo className="w-4 h-4" />
-            </a>
-            <a
-              href={LINKS.instagram}
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </Link>
+            <Link href={LINKS.instagram} aria-label="Instagram">
               <InstagramLogo className="w-4 h-4" />
-            </a>
-            <a
-              href={LINKS.x}
-              aria-label="X (Twitter)"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </Link>
+            <Link href={LINKS.x} aria-label="X (Twitter)">
               <XLogo className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
           <ThemeToggle />
         </div>
