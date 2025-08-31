@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   CTASection,
   FeaturesSection,
@@ -84,6 +84,9 @@ export const metadata: Metadata = {
   category: "technology",
   classification: "Mouse Gaming",
   referrer: "origin-when-cross-origin",
+};
+
+export const viewport: Viewport = {
   themeColor: "#000000",
   colorScheme: "dark light",
 };
