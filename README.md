@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 Velomi Store - Mouse Gaming Premium
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23.12-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-First, run the development server:
+> **Tienda especializada en mouse gaming premium en Moquegua, Perú** 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Velomi Store es una plataforma de comercio electrónico moderna y optimizada para la venta de mouse gaming premium, comenzando con el **VXE R1 Pro** - un mouse ultraligero de 48g con sensor de hasta 26,000 DPI.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Características Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎯 **Producto Destacado**
+- **VXE R1 Pro**: Mouse gaming ultraligero de 48g
+- Sensor PixArt PAW3395 de hasta 26,000 DPI
+- Conectividad dual: 2.4GHz + USB-C
+- Batería de hasta 75 horas
+- Polling hasta 4kHz
+- Garantía de 1 año
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📞 Contacto
 
-## Learn More
+- **Email**: velomistore@hotmail.com
+- **WhatsApp**: +51 932 718 790
+- **Ubicación**: Moquegua, Perú
+- **Horario**: Lunes a Sábado 9:00 - 18:00
 
-To learn more about Next.js, take a look at the following resources:
+### **Redes Sociales**
+- [Facebook](https://facebook.com/profile.php?id=61578991393463)
+- [Instagram](https://instagram.com/velmistore)
+- [TikTok](https://tiktok.com/@velmistore)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

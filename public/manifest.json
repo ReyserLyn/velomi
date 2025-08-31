@@ -1,0 +1,30 @@
+{
+  "name": "Velomi Store - Mouse Gaming Premium",
+  "short_name": "Velomi Store",
+  "description": "Tienda especializada en mouse gaming premium en Moquegua, Perú. VXE R1 Pro con sensor 26K DPI, 48g ultraligero.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo/PNG/logo-monogram-light@0.5x.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/PNG/logo-monogram-light.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/PNG/logo-monogram-light@2x.png",
+      "sizes": "288x288",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["shopping", "technology"],
+  "lang": "es-PE",
+  "dir": "ltr"
+}

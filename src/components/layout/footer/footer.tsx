@@ -1,143 +1,182 @@
-import Image from "next/image";
+"use client";
+
+import {
+  Clock,
+  CreditCard,
+  Mail,
+  MapPin,
+  Phone,
+  Shield,
+  Truck,
+} from "lucide-react";
 import Link from "next/link";
 import {
   FacebookLogo,
   InstagramLogo,
   TikTokLogo,
   WhatsAppLogo,
-  XLogo,
 } from "@/components/logos";
 import { LINKS } from "@/config/links";
 
-const footerSections = [
-  {
-    title: "Tienda",
-    links: [
-      { href: "/marcas", label: "Todas las marcas" },
-      { href: "/categorias", label: "Categorías" },
-    ],
-  },
-  {
-    title: "Empresa",
-    links: [{ href: "/contacto", label: "Contacto" }],
-  },
-  {
-    title: "Soporte",
-    links: [
-      { href: "/politica-envios", label: "Política de envíos" },
-      { href: "/politica-devoluciones", label: "Devoluciones y garantía" },
-      { href: "/terminos-condiciones", label: "Términos y condiciones" },
-      { href: "/politica-privacidad", label: "Política de privacidad" },
-    ],
-  },
-];
-
-const socialLinks = [
-  { href: LINKS.facebook, icon: FacebookLogo, label: "Facebook" },
-  { href: LINKS.instagram, icon: InstagramLogo, label: "Instagram" },
-  { href: LINKS.tiktok, icon: TikTokLogo, label: "TikTok" },
-  { href: LINKS.whatsapp, icon: WhatsAppLogo, label: "WhatsApp" },
-  { href: LINKS.x, icon: XLogo, label: "X (Twitter)" },
-];
-
-function FooterSection({
-  title,
-  links,
-}: {
-  title: string;
-  links: Array<{ href: string; label: string }>;
-}) {
+export function Footer() {
   return (
-    <div>
-      <h3 className="font-semibold text-card-foreground mb-4">{title}</h3>
-      <ul className="space-y-3">
-        {links.map(({ href, label }) => (
-          <li key={href}>
-            <Link
-              href={href}
-              className="text-sm text-muted-foreground hover:text-card-foreground transition-colors"
-            >
-              {label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function SocialIcon({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: React.ElementType;
-  label: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="w-8 h-8 flex items-center justify-center rounded-full bg-accent-foreground hover:bg-primary/80 transition-colors group"
-      aria-label={label}
-    >
-      <Icon className="w-4 h-4 text-muted-foreground group-hover:text-accent-foreground transition-colors" />
-    </Link>
-  );
-}
-
-export default function Footer() {
-  return (
-    <footer className="bg-accent border-t border-border">
-      <div className="container">
-        <div className="py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Marca */}
-            <div className="lg:col-span-1">
-              <div className="mb-6">
-                <Image
-                  src="/logo/SVG/logo-horizontal-light.svg"
-                  alt="Velomi Store"
-                  width={200}
-                  height={70}
-                  className="block"
-                />
-              </div>
-              <p className="text-muted-foreground text-sm max-w-sm">
-                Descubre las mejores marcas y productos de calidad. Tu tienda
-                online de confianza.
-              </p>
+    <footer className="bg-muted/50 border-t">
+      <div className="container px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold">Velomi Store</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Tu tienda de confianza para accesorios gaming en Moquegua, Perú.
+              Comenzamos con el VXE R1 PRO y creceremos contigo.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link
+                href={LINKS.facebook}
+                target="_blank"
+                className="hover:text-primary transition-colors group"
+              >
+                <FacebookLogo className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </Link>
+              <Link
+                href={LINKS.instagram}
+                target="_blank"
+                className="hover:text-primary transition-colors group"
+              >
+                <InstagramLogo className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </Link>
+              <Link
+                href={LINKS.tiktok}
+                target="_blank"
+                className="hover:text-primary transition-colors group"
+              >
+                <TikTokLogo className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </Link>
+              <Link
+                href={LINKS.whatsapp}
+                target="_blank"
+                className="hover:text-primary transition-colors group"
+              >
+                <WhatsAppLogo className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </Link>
             </div>
+          </div>
 
-            {/* Secciones de navegación */}
-            {footerSections.map((section) => (
-              <FooterSection key={section.title} {...section} />
-            ))}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold">Enlaces Rápidos</h3>
+            <ul className="space-y-4 text-sm">
+              <li>
+                <Link
+                  href="/"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/product/vxe-r1-pro"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  VXE R1 PRO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Términos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Política de Privacidad
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold">Contacto</h3>
+            <div className="space-y-4 text-sm">
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <Link
+                  href="tel:+51932718790"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  +51 932 718 790
+                </Link>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <Link
+                  href="mailto:velomistore@hotmail.com"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  velomistore@hotmail.com
+                </Link>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground font-medium">
+                  Moquegua, Perú
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground font-medium">
+                  Lun - Sáb: 9:00 - 18:00
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold">Nuestros Servicios</h3>
+            <div className="space-y-4 text-sm">
+              <div className="flex items-center gap-3">
+                <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground font-medium">
+                  Garantía 1 Año
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Truck className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground font-medium">
+                  Envío Gratis desde S/200
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CreditCard className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground font-medium">
+                  Múltiples Métodos de Pago
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Barra inferior con redes sociales y copyright */}
-        <div className="border-t border-border py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            {/* Redes sociales */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-card-foreground">
-                Síguenos
-              </span>
-              <div className="flex items-center gap-3 ">
-                {socialLinks.map((social) => (
-                  <SocialIcon key={social.label} {...social} />
-                ))}
-              </div>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center sm:text-right">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Velomi. Todos los derechos
-                reservados.
-              </p>
-            </div>
+        <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-sm text-muted-foreground">
+            © 2024 Velomi Store. Todos los derechos reservados.
+          </p>
+          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors font-medium"
+            >
+              Términos y Condiciones
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors font-medium"
+            >
+              Política de Privacidad
+            </Link>
           </div>
         </div>
       </div>

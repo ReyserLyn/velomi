@@ -1,73 +1,73 @@
-import { TicketPercent, Truck } from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { Phone, Zap } from "lucide-react";
 import Link from "next/link";
-import {
-  FacebookLogo,
-  InstagramLogo,
-  TikTokLogo,
-  WhatsAppLogo,
-  XLogo,
-} from "@/components/logos";
-import { ThemeToggle } from "@/components/theme-toogle";
-import { Separator } from "@/components/ui/separator";
-import { LINKS } from "@/config/links";
 
-export default function AnnouncementBar() {
+export function AnnouncementBar() {
   return (
-    <section className="bg-primary text-primary-foreground">
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 py-2 px-3 sm:px-4">
-        <span className="hidden lg:block text-xs">Velomi Store - Moquegua</span>
+    <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-b overflow-hidden">
+      <div className="relative">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"
+          animate={{
+            x: ["-100%", "100%"],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
 
-        <div className="flex items-center justify-center flex-wrap gap-1 sm:gap-2 text-xs sm:text-sm">
-          <TicketPercent className="w-4 h-4" />
-          <span className="font-bold">10% de descuento</span>
-          <span>en tu</span>
-          <span className="font-bold">primera compra</span>
-          <Separator
-            orientation="vertical"
-            className="hidden sm:block h-4 mx-2"
-          />
-          <Truck className="w-4 h-4" />
-          <span className="font-bold">Envío gratis</span>
-          <span>desde</span>
-          <span className="font-bold">S/200</span>
-        </div>
-
-        <div className="flex items-center gap-2 text-xs sm:text-sm">
-          <Link href={LINKS.whatsapp} aria-label="Contáctanos por WhatsApp">
-            <div className="flex items-center gap-2">
-              <span className="hidden xs:inline">Contáctanos:</span>
-              <WhatsAppLogo className="w-4 h-4" />
-              <span className="text-xs">+51 932 718 790</span>
-            </div>
-          </Link>
-
-          <Separator
-            orientation="vertical"
-            className="hidden sm:block h-4 mx-2"
-          />
-
-          <div className="hidden sm:flex items-center gap-2">
-            <Link href={LINKS.facebook} aria-label="Facebook">
-              <FacebookLogo className="w-4 h-4" />
-            </Link>
-            <Link
-              href={LINKS.tiktok}
-              aria-label="TikTok"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TikTokLogo className="w-4 h-4" />
-            </Link>
-            <Link href={LINKS.instagram} aria-label="Instagram">
-              <InstagramLogo className="w-4 h-4" />
-            </Link>
-            <Link href={LINKS.x} aria-label="X (Twitter)">
-              <XLogo className="w-4 h-4" />
-            </Link>
-          </div>
-          <ThemeToggle />
-        </div>
+        <motion.div
+          className="flex items-center justify-center py-3 whitespace-nowrap"
+          animate={{
+            x: ["100%", "-100%"],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <AnnouncementBarContent />
+          <AnnouncementBarContent />
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
+
+const AnnouncementBarContent = () => {
+  return (
+    <div className="flex items-center gap-6 px-8">
+      <div className="flex items-center gap-3">
+        <Zap className="w-5 h-5 text-primary animate-pulse" />
+        <span className="font-semibold text-sm">
+          🎮 ¡Nueva tienda en Moquegua!
+        </span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium">Envío gratis desde S/200</span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium">
+          10% descuento en tu primera compra
+        </span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <Link
+          href="tel:+51932718790"
+          className="flex items-center gap-2 hover:text-primary transition-colors group"
+        >
+          <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
+          <span className="font-medium text-sm">+51 932 718 790</span>
+        </Link>
+      </div>
+    </div>
+  );
+};
